@@ -96,10 +96,10 @@ margin: 5% 3% 5% 0;
   /*z-index: -1;*/
 }
 
-/*this means as soon as the title image gets to 1028px in length, the image become static without compresing/sinking and also
-get rotated back to 90 degrees that is on the mobile and tablet devices. You colud do a lot inside media query
-also aligning your text as well*/
-@media (max-width: 1028px) {
+/*this means as soon as the title image gets to 1028px (the size of a tablet screen) in length, the image become static
+without compresing/sinking and also get rotated back to 90 degrees that is on the mobile and tablet devices.
+You colud do a lot inside media query also aligning your text as well*/
+@media only screen and (max-width: 1028px) {
   #title {
     text-align: centre;
   }
@@ -151,7 +151,7 @@ also aligning your text as well*/
 .press-logo {
   width: 12%;
 /*20px from the Top, 20px from the right and the left, and 50px from the bottom*/
-  margin: 20px 20px 50px;
+  margin: 20px 15px 50px;
 }
 
 /*Pricing section*/
