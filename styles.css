@@ -1,0 +1,193 @@
+body {
+  font-family: "Montserrat"
+}
+
+#title {
+  background-color: #1687a7;
+}
+
+.container-fluid {
+/*this means 3% at the top, 15% at the right & the left, and 7% at the bottom*/
+  padding: 3% 15% 7%;
+}
+hr {
+border-style:none;
+border-top-style: dotted;
+border-color: grey;
+border-width: 5px;
+height: 5px;
+width: 5%;
+float: left;
+margin: 0 40px 0;
+}
+/* Not that font-family: "Montserrat-Black"; is also equal to font-weight: 900; as this a default settings from google-font */
+h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+h2 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 0 25%;
+}
+p {
+color: #433d3c;
+}
+/*navigation bar*/
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+.navbar-brand:hover, .navbar-brand:active {
+  background-color: #0f1123;
+}
+.navbar-nav {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+.navbar{
+  padding: 1rem 0 4.5rem;
+}
+.nav-item {
+  padding: 0 6px;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.nav-link:hover, .nav-link:active {
+  background-color: #0f1123;
+}
+
+/*Download Buttons*/
+.download-button {
+margin: 5% 3% 5% 0;
+}
+
+/*Features-section*/
+/*the next thing is to make the feature section to go ontop of the title-image by setting the feature position and z-index*/
+/*remember, 1 is greater than -1 which means the feature section goes on top of the title image*/
+/*note that relative positioning allows/keep the element to remain in the html flow*/
+#features {
+  background-color: #f5f4f4;
+  padding: 7% 15%;
+  position: relative;
+  /*z-index: 1;*/
+}
+
+/*Title Image-section*/
+/*the z-index is an advance css and it helps to allow the title image to go behind the feature section*/
+/*Remember, all the z-element by default has a default settings of zero*/
+/*note that for z-index to work it requires position, otherwise it wont work. The position is what got z-index executed*/
+/*note that absolute positioning takes out the element out of the html flow*/
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
+  /*z-index: -1;*/
+}
+
+/*this means as soon as the title image gets to 1028px (the size of a tablet screen) in length, the image become static
+without compresing/sinking and also get rotated back to 90 degrees that is on the mobile and tablet devices.
+You colud do a lot inside media query also aligning your text as well*/
+@media only screen and (max-width: 1028px) {
+  #title {
+    text-align: centre;
+  }
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+.features-box {
+  text-align: center;
+  padding: 5%;
+}
+.features-icon {
+  color: #ef4f4f;
+  margin-bottom: 1rem;
+}
+.features-icon:hover {
+  color: #1687a7;
+}
+
+/*Testimonials-section*/
+#testimonials {
+  background-color: #ffdcb8;
+  color:#0f0f0f;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.carousel-item {
+  padding: 7% 15%;
+}
+.testimonial-image {
+  width: 25%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#press {
+  background-color: #ffdcb8;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 12%;
+/*20px from the Top, 20px from the right and the left, and 50px from the bottom*/
+  margin: 20px 15px 50px;
+}
+
+/*Pricing section*/
+#pricing {
+  padding: 100px;
+  text-align: center;
+}
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+#cta {
+  background-color: #1687a7;
+  color:#0f0f0f;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 7% 15%;
+}
+
+/*footer-section*/
+#footer {
+  background-color: #f5f4f4;
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.footer-icon {
+  color:  #1687a7;
+  margin: 20px 30px;
+}
+.footer-icon:hover {
+  color: #0f0f0f;
+}
